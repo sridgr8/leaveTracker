@@ -14,10 +14,10 @@ function saveJSON(fileName='', json='""'){
 
 const data = loadJSON('dataTest.json');
 
-
+var helios="casualLeaves";
 
 // ;["Hello", "World"].forEach(word=>data[1].casualLeaves.push(word))
 
-data[1].casualLeaves.push("Welcome");
+data[0].helios.toString().push("Welcome");
 
 saveJSON('dataTest.json',data);
