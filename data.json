@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Srinivas",
+    "casualLeaves": [
+      "2020-04-22"
+    ],
+    "vacationLeaves": [
+      "2020-01-23"
+    ],
+    "paternityLeaves": [
+      "2020-02-05"
+    ],
+    "compOffLeaves": [
+      "2020-04-08"
+    ],
+    "firstHalfLeaves": [
+      "2020-07-31"
+    ],
+    "secondHalfLeaves": [
+      "2020-08-12"
+    ],
+    "maternityLeaves": [
+      "2020-10-30"
+    ],
+    "sickLeaves": [
+      "2020-06-10"
+    ]
+  },
+  {
+    "name": "Varsha",
+    "casualLeaves": [
+      "2020-05-12"
+    ],
+    "vacationLeaves": [
+      "2020-09-15"
+    ],
+    "paternityLeaves": [
+      "2020-01-25"
+    ],
+    "compOffLeaves": [
+      "2020-03-28"
+    ],
+    "firstHalfLeaves": [
+      "2020-07-16"
+    ],
+    "secondHalfLeaves": [
+      "2020-10-20"
+    ],
+    "maternityLeaves": [
+      "2020-11-14"
+    ],
+    "sickLeaves": [
+      "2020-12-11"
+    ]
+  }
+]
