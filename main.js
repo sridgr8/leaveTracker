@@ -1,4 +1,6 @@
 
+const uniqid = require('uniqid');
+const fs = require('fs');
 var btnaddInfo = document.getElementById("addInfo");
 var btnFetchInfo = document.getElementById("fetchInfo");
 var selectedPersonValue="";
@@ -20,9 +22,30 @@ function getSelectedDate(){
   console.log(selectedDateValue);
 }
 
+function loadJSON(fileName=''){
+  return JSON.parse(
+    fs.existsSync(fileName)
+    ?fs.readFileSync(fileName).toString()
+    :'""'
+  );
+}
+
+function saveJSON(fileName='', json='""'){
+  return fs.writeFileSync(fileName,JSON.stringify(json,null,2));
+}
+
 function updateJSONFile(){
-  const fs=require('fs');
-  fs.writeFileSync('data.json',"hello");
+  const data = loadJSON('data.json');
+
+  for(i=0;i<data.length;i++){
+    if((data[1].name).toString()==(selectedPersonValue).toString()){
+      data[i].selectedLeaveTypeValue.push(selectedDateValue);
+    }
+  }
+
+  
+
+  saveJSON('dataTest.json',data);
 
   // location.reload();
 }
@@ -52,8 +75,8 @@ function displayAddData(jsonData){
   addDataDiv += "<table class='table'>";
   addDataDiv += "<tr>";
   addDataDiv += "<td>Select Person</td>";
-  addDataDiv += "<td><select id='personList' onChange='getSelectedPerson()' class='btn btn-primary dropdown-toggle'>";
-  addDataDiv += "<option value=''>Select an Option</option>";
+  addDataDiv += "<td><select id='personList' onChange='"+getSelectedPerson();+"' class='btn btn-primary dropdown-toggle'>";
+  addDataDiv += "<option value='aa'>Select an Option</option>";
   for (var i = 0; i < jsonData.length; i++) {
     addDataDiv += "<option value='"+jsonData[i].name+"'>"+jsonData[i].name+"</option>";
   }
